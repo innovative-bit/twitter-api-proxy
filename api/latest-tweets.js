@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import cors from "cors";
 
 const BEARER_TOKEN = process.env.BEARER_TOKEN;
