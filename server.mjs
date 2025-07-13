@@ -3,9 +3,11 @@ import fetch from "node-fetch";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "https://testmoomoo.framer.website"
+}));
 
-const BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAGAs3AEAAAAAy6xWVutqqxvxhKCr36qxlEFKGtE%3Dcui9wUWCZnNVOrkT8DL6fjPWtiEuC5oF7Ug3eZ7JdxsEP7SJLg';
+const BEARER_TOKEN = process.env.BEARER_TOKEN;
 const userId = '1944362340561887232'; // Hard-coded user ID for MooMooPortfolio
 const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes in milliseconds
 
